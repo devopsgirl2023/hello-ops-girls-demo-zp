@@ -91,6 +91,7 @@ jobs:
 `aws ecr get-login-password --region {{ aws_region }} | docker login --username AWS --password-stdin {{ aws_account }}.dkr.ecr.{{ aws_region }}.amazonaws.com"`
 ### step6: 拉取 docker image
 `docker pull {{ aws_account }}.dkr.ecr.{{ aws_region }}.amazonaws.com/devopsgirl2023/{{ ecr_repo }}:latest`
+`docker pull 494526681395.dkr.ecr.494526681395.amazonaws.com/devopsgirl2023/devopsgirl2023/hello-ops-girl:latest`
 ### step7: 启动 docker
 `docker run --name hello-ops-girl-app -d -p 8000:8000 {{ aws_account }}.dkr.ecr.{{ aws_region }}.amazonaws.com/devopsgirl2023/{{ ecr_repo }}:latest`
 ### step8: 安装 nginx
