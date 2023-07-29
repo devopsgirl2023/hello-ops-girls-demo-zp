@@ -24,7 +24,7 @@ Resources:
       InstanceType: t2.micro
       KeyName: devops-girls-2023
       SecurityGroups:
-        -!Ref SecurityGroupName
+        - !Ref SecurityGroupName
       IamInstanceProfile: !Ref InstanceProfile
       UserData:
         Fn::Base64: |
